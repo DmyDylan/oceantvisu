@@ -1,6 +1,5 @@
 import {require} from 'd3-require';
 import * as d3 from 'd3';
-import * as io from 'socket.io-client'
 
 // Resolve "d3@5" module to current object `d3`
 // Be careful: the 'd3@5' alias must be *exactly* the same string as in your
@@ -8,5 +7,5 @@ import * as io from 'socket.io-client'
 // 'd3@5.11.0' would not work
 export const customResolve = require.alias({
   'd3@5': d3,
-  'socket.io-client@4.1.2/dist/socket.io.js':io,
+  'socket.io-client@4.1.2/dist/socket.io.js': ''./socket.io.js',
 }).resolve;
