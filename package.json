@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c && cp src/index.html public/",
+    "build": "rollup -c && cp src/index.html public/ && cp node_modules/socket.io-client/dist/socket.io.js public/",
     "serve": "http-server public/",
     "preserve": "npm run build",
     "notebook": "rm -rf vendor/ && mkdir vendor && curl -o vendor/notebook.tgz https://api.observablehq.com/d/c59e0494a0106f95.tgz?v=3 && npm install --save-dev aaa_notebook@file:vendor/notebook.tgz",
