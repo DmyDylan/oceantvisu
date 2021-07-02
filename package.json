@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c && cp src/index.html public/ && cp node_modules/socket.io-client/dist/socket.io.js public/",
+    "build": "rollup -c && cp src/index.html public/ && cp node_modules/socket.io-client/dist/socket.io.js public/ && cp src/style.css public/ && cp src/jquery-ui.css public/ && cp -r src/images/ public/",
     "serve": "http-server public/",
     "preserve": "npm run build",
     "notebook": "rm -rf vendor/ && mkdir vendor && curl -o vendor/notebook.tgz https://api.observablehq.com/d/c59e0494a0106f95.tgz?v=3 && npm install --save-dev aaa_notebook@file:vendor/notebook.tgz",
@@ -19,7 +19,11 @@
     "d3": "^5.16.0",
     "d3-require": "^1.2.4",
     "http-server": "^0.12.3",
+    "jquery": "^2.2.4",
+    "jquery-ui": "^1.10.5",
+    "marked": "^0.3.12",
     "rollup": "^1.32.1",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "socket.io-client": "^4.1.2"
   }

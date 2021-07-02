@@ -1,5 +1,6 @@
 import * as meta from './package.json';
 import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs'
 
 const onwarn = function(warning, warn) {
   if (warning.code === 'CIRCULAR_DEPENDENCY') {
@@ -22,5 +23,5 @@ export default {
   input: 'src/main.js',
   onwarn: onwarn,
   output: output,
-  plugins: [resolve()],
+  plugins: [resolve(),commonjs()],
 };

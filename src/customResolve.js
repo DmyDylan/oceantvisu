@@ -7,5 +7,5 @@ import * as d3 from 'd3';
 // 'd3@5.11.0' would not work
 export const customResolve = require.alias({
   'd3@5': d3,
-  'socket.io-client@4.1.2/dist/socket.io.js': ''./socket.io.js',
+  'socket.io-client@4.1.2/dist/socket.io.js': './socket.io.js',
 }).resolve;
